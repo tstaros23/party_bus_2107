@@ -21,10 +21,14 @@ class Bus
   end
 
   def over_capacity?
-    if number_of_passengers >= 4
+    if number_of_passengers > 4
       true
     else
       false
     end
+  end
+
+  def kick_out
+      @passengers.shift
   end
 end
